@@ -9,7 +9,7 @@ import 'package:flutter_app/constants.dart';
 import '../../size_config.dart';
 
 class SignInScreen extends StatelessWidget {
-static String routeName ="/sign_in";
+//static String routeName ="/sign_in";
 
   @override
   Widget build(BuildContext context) {
@@ -42,27 +42,10 @@ static String routeName ="/sign_in";
                           SizedBox(height: getProportionateScreenWidth(30)),
                           SignForm(),
                           SizedBox(height: getProportionateScreenWidth(20)),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SocalCard(
-                                icon: Icons.g_mobiledata_outlined,
-                                press: () {},
-                              ),
-                              SocalCard(
-                                icon: Icons.facebook_outlined,
-                                press: () {},
-                              ),
-                              SocalCard(
-                                icon: Icons.approval_outlined,
-                                press: () {},
-                              ),
-                            ],
-                          ),
+                          Social(),
                           SizedBox(height: getProportionateScreenWidth(20)),
                           NoAccountText(),
                           SizedBox(height: getProportionateScreenWidth(10)),
-                          
                         ],
                       ),
                     ),
@@ -74,4 +57,6 @@ static String routeName ="/sign_in";
     );
   }
 }
+
+
 

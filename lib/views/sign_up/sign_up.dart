@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app/Widgets/WaveClipper.dart';
 import 'package:flutter_app/Widgets/intro.dart';
+import 'package:flutter_app/Widgets/no_account_text.dart';
 import 'package:flutter_app/Widgets/signup_form.dart';
+import 'package:flutter_app/Widgets/socal_card.dart';
 import 'package:flutter_app/constants.dart';
 import '../../size_config.dart';
 
@@ -39,6 +41,10 @@ static String routeName ="/sign_up";
                     BodyText(text:"Complete your details or continue \n with social media"),
                     SizedBox(height: getProportionateScreenWidth(30)),
                     SignUpForm(),
+                    SizedBox(height: getProportionateScreenWidth(20)),
+                    Social(),
+                    SizedBox(height: getProportionateScreenWidth(20)),
+                    NoAccountText(),
                   ],
                 ),
               ),

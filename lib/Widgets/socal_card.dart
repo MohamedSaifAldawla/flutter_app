@@ -1,7 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/constants.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../size_config.dart';
+
+class Social extends StatelessWidget {
+  const Social({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SocalCard(
+          icon: "assets/icons/google-icon.svg",
+          press: () {},
+        ),
+        SocalCard(
+          icon: "assets/icons/facebook-2.svg",
+          press: () {},
+        ),
+        SocalCard(
+          icon: "assets/icons/twitter.svg",
+          press: () {},
+        ),
+         SocalCard(
+          icon: "assets/icons/Apple_logo_black.svg",
+          press: () {},
+        ),
+      ],
+    );
+  }
+}
 
 class SocalCard extends StatelessWidget {
   const SocalCard({
@@ -10,7 +41,7 @@ class SocalCard extends StatelessWidget {
     this.press,
   }) : super(key: key);
 
-  final IconData icon;
+  final String icon;
   final Function press;
 
   @override
@@ -19,8 +50,9 @@ class SocalCard extends StatelessWidget {
       onTap: press as void Function(),
       child: Container(
         margin:EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(10)),
-        height: 50,
-        width: 50,
+        padding: EdgeInsets.all(9),
+        height: 40,
+        width: 40,
         decoration: BoxDecoration(
           color: Color(0xFFF5F6F9),
           shape: BoxShape.circle,
@@ -32,10 +64,7 @@ class SocalCard extends StatelessWidget {
             ),
           ],
         ),
-        child: Icon(
-          icon,
-          color: kSecondaryColor,
-          ),
+        child: SvgPicture.asset(icon),
       ),
     );
   }
